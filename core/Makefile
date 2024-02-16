@@ -911,7 +911,7 @@ $(INSTALLED_FILES_FILE_ROOT) : $(INTERNAL_ROOT_FILES) $(FILESLIST) $(FILESLIST_U
 	$(FILESLIST_UTIL) -c $(@:.txt=.json) > $@
 
 	@echo "Generating Changelog"
-	$(hide) ./vendor/derp/tools/changelog
+	$(hide) ./vendor/scoop/tools/changelog
 	$(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/$(PLATFORM_VERSION)-$(TARGET_PRODUCT)-$(shell $(DATE_FROM_FILE) +%Y%m%d-%H%M)-Changelog.txt
 
 $(call declare-0p-target,$(INSTALLED_FILES_FILE_ROOT))
